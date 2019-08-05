@@ -1,9 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import configureStore from './config/store';
+import MainLayout from './src/Main/MainLayout';
 
 const App = () => {
-	return <div>Hello World</div>;
+	return (
+		<React.Fragment>
+			<MainLayout />
+		</React.Fragment>
+	);
 };
 
 const mountNode = document.getElementById('app');
