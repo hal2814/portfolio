@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Global, css } from '@emotion/core';
 import { Provider } from 'react-redux';
 import configureStore from './config/store';
-import MainLayout from './src/Main/MainLayout';
+import MainLayout from './Main/MainLayout';
 
 const App = () => {
+	const globalStyles = css`
+	`;
+
 	return (
 		<React.Fragment>
+			<Global styles={globalStyles} />
 			<MainLayout />
 		</React.Fragment>
 	);

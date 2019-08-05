@@ -9,12 +9,32 @@ const MainLayout = ({
 }) => {
     const mainLayoutStyles = css`
         color: ${PRIMARY};
+
+        .parallax {
+            background-image: url('public/portland.jpg');
+            height: 100%;
+            background-attachment:fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .other-section {
+            height: 1000px;
+            background-color:rebeccapurple;
+            font-size:36;
+        }
     `;
 
     return (
-        <div css={mainLayoutStyles}>
-            MainLayout
-        </div>
+            <div css={mainLayoutStyles}>
+                <div>
+                    <img src="./portland.jpg"/>
+                </div>
+                {/* <div className="other-section">
+                    thing...
+                </div> */}
+            </div>
     );
 };
 
