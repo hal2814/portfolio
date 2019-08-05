@@ -1,0 +1,4 @@
+{
+    "presets": ["@babel/env", "@babel/react", "@emotion/babel-preset-css-prop"],
+    "plugins": ["transform-node-env-inline", "@babel/plugin-transform-runtime"]
+}
