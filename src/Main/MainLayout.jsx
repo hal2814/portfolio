@@ -7,12 +7,15 @@ import { PRIMARY } from '../consts/css';
 const MainLayout = ({
     // things, doThingsAction,
 }) => {
+    const imgUrl = './portland.jpg';
+
     const mainLayoutStyles = css`
         color: ${PRIMARY};
 
         .parallax {
-            background-image: url('public/portland.jpg');
+            background-image: url(${imgUrl});
             height: 100%;
+            width: 100%;
             background-attachment:fixed;
             background-position: center;
             background-repeat: no-repeat;
@@ -28,12 +31,13 @@ const MainLayout = ({
 
     return (
             <div css={mainLayoutStyles}>
-                <div>
-                    <img src="./portland.jpg"/>
+                <div className="parallax">
+                    {/* <img src="./portland.jpg"/> */}
                 </div>
-                {/* <div className="other-section">
-                    thing...
-                </div> */}
+                <div className="other-section">cool</div>
+                <div className="parallax">
+                    {/* <img src="./portland.jpg"/> */}
+                </div>
             </div>
     );
 };

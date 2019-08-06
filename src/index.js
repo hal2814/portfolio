@@ -7,6 +7,8 @@ import MainLayout from './Main/MainLayout';
 
 const App = () => {
 	const globalStyles = css`
+		height: 100%;
+		width: 100%;
 	`;
 
 	return (
