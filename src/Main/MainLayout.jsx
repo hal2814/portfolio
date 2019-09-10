@@ -2,17 +2,17 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { css } from '@emotion/core';
+import NavBar from '../Nav/NavBar';
 import { PRIMARY } from '../consts/css';
 
 const MainLayout = ({
     // things, doThingsAction,
 }) => {
-    const imgUrl = './portland.jpg';
 
     const mainLayoutStyles = css`
         color: ${PRIMARY};
 
-        .parallax {
+        ${'' /* .parallax {
             background-image: url(${imgUrl});
             height: 100%;
             width: 100%;
@@ -20,7 +20,7 @@ const MainLayout = ({
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-        }
+        } */}
 
         .other-section {
             height: 1000px;
@@ -31,12 +31,8 @@ const MainLayout = ({
 
     return (
             <div css={mainLayoutStyles}>
-                <div className="parallax">
-                    {/* <img src="./portland.jpg"/> */}
-                </div>
-                <div className="other-section">cool</div>
-                <div className="parallax">
-                    {/* <img src="./portland.jpg"/> */}
+                <NavBar />
+                <div className="other-section">
                 </div>
             </div>
     );
