@@ -8,16 +8,35 @@ const NavBar = ({
 }) => {
     const navBarStyles = css`
         .nav-container {
-            width: 100%;
             height: 100px;
             background-color: goldenrod;
             overflow: hidden;
+            padding: 5px;
+            border: .5px solid black;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            order: 0;
+            justify-content: flex-start;
+            font-size: 30px;
+            font-family: 'Fredoka One', cursive;
+        }
+
+        .nav-item {
+            justify-content: flex-end;
         }
     `;
 
     return (
         <div css={navBarStyles}>
-            <div className="nav-container">cool</div>
+            <div className="nav-container">
+                <div className="logo">
+                    NATE MCGREGOR
+                </div>
+            </div>
         </div>
     );
 };

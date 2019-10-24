@@ -11,16 +11,11 @@ const MainLayout = ({
 
     const mainLayoutStyles = css`
         color: ${PRIMARY};
+        width: 100%;
 
-        ${'' /* .parallax {
-            background-image: url(${imgUrl});
-            height: 100%;
-            width: 100%;
-            background-attachment:fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        } */}
+        .container { 
+            display: flex;
+        }
 
         .other-section {
             height: 1000px;
