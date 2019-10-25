@@ -13,28 +13,63 @@ const NavBar = ({
             overflow: hidden;
             padding: 5px;
             border: .5px solid black;
-            border-radius: 10px;
+            border-radius: 7px;
+            display: flex;
+            font-family: 'Fredoka One', cursive;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-container {
+            width: 275px;
+            height: 100%;
             display: flex;
             align-items: center;
+            border: .5px solid black;
+        }
+
+        .item-container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            border: .5px solid black;
+            align-items: center;
+            justify-content: flex-end;
         }
 
         .logo {
             order: 0;
+            padding: 5px;
             justify-content: flex-start;
             font-size: 30px;
-            font-family: 'Fredoka One', cursive;
         }
 
         .nav-item {
-            justify-content: flex-end;
+            width: 100px;
+            padding: 5px;
+            border: .5px solid black;
+            font-size: 23px;
         }
     `;
 
     return (
         <div css={navBarStyles}>
             <div className="nav-container">
-                <div className="logo">
-                    NATE MCGREGOR
+                <div className="logo-container">
+                    <div className="logo">
+                        NATE MCGREGOR
+                    </div>
+                </div>
+                <div className="item-container">
+                    <div className="nav-item">
+                        Work
+                    </div>
+                    <div className="nav-item">
+                        Life
+                    </div>
+                    <div className="nav-item">
+                        Stuff
+                    </div>
                 </div>
             </div>
         </div>
