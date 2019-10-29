@@ -1,5 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/core';
+import { FOCUSCOLOR } from '../consts/css';
 // import { bindActionCreators } from 'redux';
 // import { connect } from 'react-redux';
 
@@ -10,11 +11,21 @@ const Panel = ({
         padding: 30px;
 
         .focus { 
+            display: flex;
             height: 500px;
             width: 100%;
-            display: flex;
-            justify-content: center;
+            border: .5px solid black;
             align-items: center;
+            justify-content: center;
+        }
+
+        .text-focus {
+            color: ${FOCUSCOLOR};
+            display: flex;
+            align-items: center;
+            height: 100px;
+            font-family: 'Didact Gothic', sans-serif;
+            font-size: 40px;
             border: .5px solid black;
         }
     `;
@@ -22,7 +33,9 @@ const Panel = ({
     return (
         <div css={PanelStyles}>
             <div className="focus">
-                Hi, I'm Nate. I use modern frontend frameworks to build web applications.
+                <div className="text-focus">
+                    Hi, I'm Nate. I use modern frontend frameworks to build web applications.
+                </div>
             </div>
         </div>
     );

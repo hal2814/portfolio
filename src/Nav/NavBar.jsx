@@ -13,14 +13,14 @@ const NavBar = ({
         width: 100%;
 
         .nav-container {
-            height: 100px;
-            background-color: goldenrod;
+            height: 60px;
+            background-color: #256EFF;
             overflow: hidden;
             padding: 5px;
             border: .5px solid black;
             border-radius: 7px;
             display: flex;
-            font-family: 'Fredoka One', cursive;
+            font-family: 'Staatliches', cursive;
             align-items: center;
             justify-content: space-between;
         }

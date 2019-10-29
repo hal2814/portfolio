@@ -14,9 +14,10 @@ const MainLayout = ({
         color: ${PRIMARY};
         width: 100%;
         height: 1000px;
-        margin-top: 100px;
-        background-color:rebeccapurple;
+        margin-top: 60px;
+        ${'' /* background-color:rebeccapurple; */}
         font-size:36;
+        background-image: linear-gradient(#340068, #DA3E52);
 
         .container { 
             display: flex;
