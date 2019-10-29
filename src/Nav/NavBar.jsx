@@ -7,6 +7,11 @@ const NavBar = ({
     // things, doThingsAction,
 }) => {
     const navBarStyles = css`
+        position: fixed;
+        overflow: hidden;
+        top: 0;
+        width: 100%;
+
         .nav-container {
             height: 100px;
             background-color: goldenrod;
@@ -24,6 +29,7 @@ const NavBar = ({
             width: 275px;
             height: 100%;
             display: flex;
+            margin: 20px;
             align-items: center;
             border: .5px solid black;
         }
@@ -32,6 +38,7 @@ const NavBar = ({
             height: 100%;
             width: 100%;
             display: flex;
+            margin: 20px;
             border: .5px solid black;
             align-items: center;
             justify-content: flex-end;
