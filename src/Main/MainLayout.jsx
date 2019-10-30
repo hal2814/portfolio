@@ -12,29 +12,20 @@ const MainLayout = ({
 
     const mainLayoutStyles = css`
         color: ${PRIMARY};
-        width: 100%;
+        ${'' /* width: 100%; */}
         height: 1000px;
         margin-top: 60px;
-        ${'' /* background-color:rebeccapurple; */}
         font-size:36;
         background-image: linear-gradient(#340068, #DA3E52);
 
         .container { 
             display: flex;
         }
-
-        ${'' /* .other-section {
-            height: 1000px;
-            background-color:rebeccapurple;
-            font-size:36;
-        } */}
     `;
 
     return (
             <div css={mainLayoutStyles}>
                 <NavBar />
-                {/* <div className="other-section">
-                </div> */}
                 <Panel />
             </div>
     );

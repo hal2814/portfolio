@@ -14,7 +14,7 @@ const Panel = ({
             display: flex;
             height: 500px;
             width: 100%;
-            border: .5px solid black;
+            ${'' /* border: .5px solid black; */}
             align-items: center;
             justify-content: center;
         }
@@ -24,16 +24,19 @@ const Panel = ({
             display: flex;
             align-items: center;
             height: 100px;
+            ${'' /* border: .5px solid black; */}
+        }
+
+        .welcome-text {
+            font-size: 42px;
             font-family: 'Didact Gothic', sans-serif;
-            font-size: 40px;
-            border: .5px solid black;
         }
     `;
 
     return (
         <div css={PanelStyles}>
             <div className="focus">
-                <div className="text-focus">
+                <div className="text-focus welcome-text">
                     Hi, I'm Nate. I use modern frontend frameworks to build web applications.
                 </div>
             </div>

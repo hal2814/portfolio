@@ -17,7 +17,7 @@ const NavBar = ({
             background-color: #256EFF;
             overflow: hidden;
             padding: 5px;
-            border: .5px solid black;
+            ${'' /* border: .5px solid black; */}
             border-radius: 7px;
             display: flex;
             font-family: 'Staatliches', cursive;
@@ -31,7 +31,7 @@ const NavBar = ({
             display: flex;
             margin: 20px;
             align-items: center;
-            border: .5px solid black;
+            ${'' /* border: .5px solid black; */}
         }
 
         .item-container {
@@ -39,7 +39,7 @@ const NavBar = ({
             width: 100%;
             display: flex;
             margin: 20px;
-            border: .5px solid black;
+            ${'' /* border: .5px solid black; */}
             align-items: center;
             justify-content: flex-end;
         }
@@ -48,13 +48,13 @@ const NavBar = ({
             order: 0;
             padding: 5px;
             justify-content: flex-start;
-            font-size: 30px;
+            font-size: 33px;
         }
 
         .nav-item {
             width: 100px;
             padding: 5px;
-            border: .5px solid black;
+            ${'' /* border: .5px solid black; */}
             font-size: 23px;
         }
     `;
