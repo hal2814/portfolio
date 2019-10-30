@@ -49,6 +49,7 @@ const NavBar = ({
             padding: 5px;
             justify-content: flex-start;
             font-size: 33px;
+            white-space: nowrap;
         }
 
         .nav-item {

@@ -1,2 +1,2 @@
-export const PRIMARY = '#000000';
+export const PRIMARY = '#121A23';
 export const FOCUSCOLOR = '#FFFFFF';

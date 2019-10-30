@@ -24,12 +24,15 @@ const Panel = ({
             display: flex;
             align-items: center;
             height: 100px;
+            width: 75%;
             ${'' /* border: .5px solid black; */}
         }
 
         .welcome-text {
             font-size: 42px;
             font-family: 'Didact Gothic', sans-serif;
+            text-shadow: 2px 2px 5px #340068;
+            ${'' /* text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px #340068; */}
         }
     `;
 
