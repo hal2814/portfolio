@@ -16,19 +16,25 @@ const MainLayout = ({
         height: 1000px;
         margin-top: 60px;
         font-size:36;
-        background-image: linear-gradient(${GRAD1}, ${GRAD2});
+        ${'' /* background-image: linear-gradient(${GRAD1}, ${GRAD2}); */}
 
         .container { 
             display: flex;
         }
     `;
 
-    const welcomeText = "Hi, I'm Nate. I use modern frontend frameworks to build web applications."
+    const welcomeText = "Hi, I'm Nate. I use modern frontend frameworks to build web applications.";
+
+    const gradBackground = "gradient-background";
+
+    const curve = "curve";
 
     return (
             <div css={mainLayoutStyles}>
                 <NavBar />
-                <Panel welcomeText={welcomeText} />
+                <Panel welcomeText={welcomeText} backgroundType={gradBackground} curveType={curve} />
+                <Panel />
+                <Panel />
             </div>
     );
 };

@@ -1,25 +1,33 @@
 import React from 'react';
 import { css } from '@emotion/core';
-import { FOCUSCOLOR } from '../consts/css';
+import { FOCUSCOLOR, GRAD1, GRAD2  } from '../consts/css';
 // import { bindActionCreators } from 'redux';
 // import { connect } from 'react-redux';
 
 const Panel = (props) => {
     const {
-        welcomeText
+        welcomeText, backgroundType, curveType
         // things, doThingsAction,
     } = props;
 
     const PanelStyles = css`
-        padding: 30px;
+        ${'' /* padding: 30px; */}
 
         .focus { 
             display: flex;
-            height: 500px;
+            height: 600px;
             width: 100%;
             ${'' /* border: .5px solid black; */}
             align-items: center;
             justify-content: center;
+        }
+
+        .gradient-background {
+            background-image: linear-gradient(${GRAD1}, ${GRAD2});
+        }
+
+        .curve {
+            border-radius: 0 0 75% 0%;
         }
 
         .text-focus {
@@ -40,7 +48,7 @@ const Panel = (props) => {
 
     return (
         <div css={PanelStyles}>
-            <div className="focus">
+            <div className={"focus" + " " + backgroundType + " " + curveType}>
                 <div className="text-focus welcome-text">
                     {welcomeText}
                 </div>

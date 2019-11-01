@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/core';
-import { NAVCOLOR } from '../consts/css';
+import { NAVCOLOR, PRIMARY } from '../consts/css';
 // import { bindActionCreators } from 'redux';
 // import { connect } from 'react-redux';
 
@@ -12,6 +12,11 @@ const NavBar = ({
         overflow: hidden;
         top: 0;
         width: 100%;
+
+        a {
+            color: ${PRIMARY};
+            text-decoration: none;
+        }
 
         .nav-container {
             height: 60px;
@@ -71,13 +76,13 @@ const NavBar = ({
                 </div>
                 <div className="item-container">
                     <div className="nav-item">
-                        Work
+                        <a href="#">Work</a>
                     </div>
                     <div className="nav-item">
-                        Life
+                        <a href="#">Life</a>
                     </div>
                     <div className="nav-item">
-                        Stuff
+                        <a href="#">Stuff</a>
                     </div>
                 </div>
             </div>
