@@ -23,10 +23,12 @@ const MainLayout = ({
         }
     `;
 
+    const welcomeText = "Hi, I'm Nate. I use modern frontend frameworks to build web applications."
+
     return (
             <div css={mainLayoutStyles}>
                 <NavBar />
-                <Panel />
+                <Panel welcomeText={welcomeText} />
             </div>
     );
 };

@@ -4,9 +4,12 @@ import { FOCUSCOLOR } from '../consts/css';
 // import { bindActionCreators } from 'redux';
 // import { connect } from 'react-redux';
 
-const Panel = ({
-    // things, doThingsAction,
-}) => {
+const Panel = (props) => {
+    const {
+        welcomeText
+        // things, doThingsAction,
+    } = props;
+
     const PanelStyles = css`
         padding: 30px;
 
@@ -32,7 +35,6 @@ const Panel = ({
             font-size: 42px;
             font-family: 'Didact Gothic', sans-serif;
             text-shadow: 2px 2px 5px #340068;
-            ${'' /* text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px #340068; */}
         }
     `;
 
@@ -40,7 +42,7 @@ const Panel = ({
         <div css={PanelStyles}>
             <div className="focus">
                 <div className="text-focus welcome-text">
-                    Hi, I'm Nate. I use modern frontend frameworks to build web applications.
+                    {welcomeText}
                 </div>
             </div>
         </div>
@@ -48,6 +50,7 @@ const Panel = ({
 };
 
 // Panel.propTypes = {
+//     welcomeText: propTypes.string.isRequired
 //     // things: PropTypes.array.isRequired,
 //     // doThingAction: PropTypes.func.isRequired, 
 // };
