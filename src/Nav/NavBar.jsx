@@ -1,5 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/core';
+import { NAVCOLOR } from '../consts/css';
 // import { bindActionCreators } from 'redux';
 // import { connect } from 'react-redux';
 
@@ -14,7 +15,7 @@ const NavBar = ({
 
         .nav-container {
             height: 60px;
-            background-color: #256EFF;
+            background-color: ${NAVCOLOR};
             overflow: hidden;
             padding: 5px;
             ${'' /* border: .5px solid black; */}
