@@ -1,25 +1,25 @@
 import React from 'react';
 import { css } from '@emotion/core';
-import { FOCUSCOLOR, GRAD1, GRAD2  } from '../consts/css';
+import { FOCUSCOLOR, FOCUSHEAD, GRAD1, GRAD2  } from '../consts/css';
 // import { bindActionCreators } from 'redux';
 // import { connect } from 'react-redux';
 
 const Panel = (props) => {
     const {
-        welcomeText, backgroundType, curveType
+        welcomeText, welcomeTextHead, backgroundType, curveType
         // things, doThingsAction,
     } = props;
 
     const PanelStyles = css`
-        ${'' /* padding: 30px; */}
 
         .focus { 
             display: flex;
             height: 600px;
             width: 100%;
-            ${'' /* border: .5px solid black; */}
+            border: .5px solid black;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
         }
 
         .gradient-background {
@@ -33,23 +33,31 @@ const Panel = (props) => {
         .text-focus {
             color: ${FOCUSCOLOR};
             display: flex;
-            align-items: center;
-            height: 100px;
             width: 75%;
             ${'' /* border: .5px solid black; */}
         }
 
         .welcome-text {
             font-size: 42px;
-            font-family: 'Didact Gothic', sans-serif;
+            font-family: 'Armata', sans-serif;
             text-shadow: 2px 2px 5px #340068;
+        }
+
+        .welcome-text-head {
+            font-size: 50px;
+            color: ${FOCUSHEAD};
         }
     `;
 
     return (
         <div css={PanelStyles}>
             <div className={"focus" + " " + backgroundType + " " + curveType}>
+                <div className="text-focus welcome-text welcome-text-head">
+                    {welcomeTextHead}
+                    {/* {welcomeText} */}
+                </div>
                 <div className="text-focus welcome-text">
+                    {/* {welcomeTextHead} */}
                     {welcomeText}
                 </div>
             </div>

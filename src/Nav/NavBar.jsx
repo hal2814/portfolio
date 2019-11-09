@@ -71,18 +71,18 @@ const NavBar = ({
             <div className="nav-container">
                 <div className="logo-container">
                     <div className="logo">
-                        NATE MCGREGOR
+                        NATE McGREGOR
                     </div>
                 </div>
                 <div className="item-container">
                     <div className="nav-item">
-                        <a href="#">Work</a>
+                        <a href="#">WORK</a>
                     </div>
                     <div className="nav-item">
-                        <a href="#">Life</a>
+                        <a href="#">LIFE</a>
                     </div>
                     <div className="nav-item">
-                        <a href="#">Stuff</a>
+                        <a href="#">STUFF</a>
                     </div>
                 </div>
             </div>

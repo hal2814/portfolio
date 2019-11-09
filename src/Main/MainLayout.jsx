@@ -23,16 +23,19 @@ const MainLayout = ({
         }
     `;
 
-    const welcomeText = "Hi, I'm Nate. I use modern frontend frameworks to build web applications.";
+    const welcomeText = "I use modern frontend frameworks to build web applications.";
+
+    const welcomeTextHead = "Hi, I'm Nate. "
 
     const gradBackground = "gradient-background";
 
     const curve = "curve";
 
+
     return (
             <div css={mainLayoutStyles}>
                 <NavBar />
-                <Panel welcomeText={welcomeText} backgroundType={gradBackground} curveType={curve} />
+                <Panel welcomeText={welcomeText} welcomeTextHead={welcomeTextHead} backgroundType={gradBackground} curveType={curve} />
                 <Panel />
                 <Panel />
             </div>
