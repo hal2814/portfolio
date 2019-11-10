@@ -16,7 +16,7 @@ const Panel = (props) => {
             display: flex;
             height: 600px;
             width: 100%;
-            border: .5px solid black;
+            ${'' /* border: .5px solid black; */}
             align-items: center;
             justify-content: center;
             flex-direction: column;

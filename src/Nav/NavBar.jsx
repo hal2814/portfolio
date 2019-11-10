@@ -64,12 +64,30 @@ const NavBar = ({
             ${'' /* border: .5px solid black; */}
             font-size: 23px;
         }
+
+        .logo-img {
+            width: 35px;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .make-spin:hover {
+            animation: spin 0.5s;
+        }
     `;
 
     return (
         <div css={navBarStyles}>
             <div className="nav-container">
                 <div className="logo-container">
+                    <img className="logo-img make-spin" src="rainbow-small.png"></img>
                     <div className="logo">
                         NATE McGREGOR
                     </div>
