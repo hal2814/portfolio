@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { css } from '@emotion/core';
 import NavBar from '../Nav/NavBar';
 import Panel from '../Panel/Panel';
+import AOS from 'aos';
 import { PRIMARY, GRAD1, GRAD2 } from '../consts/css';
 
 const MainLayout = ({
     // things, doThingsAction,
 }) => {
+
+    useEffect(() => {
+        AOS.init();
+        console.log('useEffect!')
+    },[]);
 
     const mainLayoutStyles = css`
         color: ${PRIMARY};
@@ -33,12 +39,15 @@ const MainLayout = ({
 
 
     return (
-            <div css={mainLayoutStyles}>
-                <NavBar />
+        <div css={mainLayoutStyles}>
+            <NavBar />
+            <div data-aos="fade-in">
                 <Panel welcomeText={welcomeText} welcomeTextHead={welcomeTextHead} backgroundType={gradBackground} curveType={curve} />
-                <Panel />
-                <Panel />
             </div>
+            <Panel welcomeText={'work'}/>
+            <Panel welcomeText={'life'}/>
+            <Panel welcomeText={'stuff'}/>
+        </div>
     );
 };
 
