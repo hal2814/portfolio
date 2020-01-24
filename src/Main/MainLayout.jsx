@@ -41,9 +41,9 @@ const MainLayout = ({
     return (
         <div css={mainLayoutStyles}>
             <NavBar />
-            <div data-aos="fade-in">
+            <main data-aos="fade-in">
                 <Panel welcomeText={welcomeText} welcomeTextHead={welcomeTextHead} backgroundType={gradBackground} curveType={curve} />
-            </div>
+            </main>
             <Panel welcomeText={'work'}/>
             <Panel welcomeText={'life'}/>
             <Panel welcomeText={'stuff'}/>

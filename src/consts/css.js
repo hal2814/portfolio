@@ -1,4 +1,4 @@
-export const PRIMARY = '#121A23';
+export const PRIMARY = '#000000';
 export const FOCUSCOLOR = '#FFFFFF';
 export const NAVCOLOR = '#256EFF';
 export const GRAD1 = '#340068';
