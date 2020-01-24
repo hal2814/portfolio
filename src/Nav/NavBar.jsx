@@ -87,7 +87,7 @@ const NavBar = ({
         <div css={navBarStyles}>
             <nav className="nav-container">
                 <div className="logo-container">
-                    <img className="logo-img make-spin" src="rainbow-small.png"></img>
+                    <img alt="spinning rainbow logo" className="logo-img make-spin" src="rainbow-small.png"></img>
                     <div className="logo">
                         NATE McGREGOR
                     </div>
