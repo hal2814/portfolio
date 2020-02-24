@@ -47,6 +47,20 @@ const Panel = (props) => {
             font-size: 50px;
             color: ${FOCUSHEAD};
         }
+
+        @media only screen and (max-width: 600px) {
+            .welcome-text {
+                font-size: 22px;
+            }
+
+            .welcome-text-head {
+                font-size: 25px;
+            }
+
+            .curve {
+                border-radius: 0 0 0% 0%;
+            }
+        }
     `;
 
     return (

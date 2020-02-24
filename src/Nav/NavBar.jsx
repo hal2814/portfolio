@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { css } from '@emotion/core';
 import { NAVCOLOR, PRIMARY } from '../consts/css';
 // import { bindActionCreators } from 'redux';
@@ -7,6 +7,15 @@ import { NAVCOLOR, PRIMARY } from '../consts/css';
 const NavBar = ({
     // things, doThingsAction,
 }) => {
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
+
+    useEffect(() => {
+        function handleResize() {
+            setIsMobile(window.innerWidth <= 600)
+        }
+        window.addEventListener('resize', handleResize)
+    });
+
     const navBarStyles = css`
         position: fixed;
         overflow: hidden;
@@ -23,7 +32,7 @@ const NavBar = ({
             background-color: ${NAVCOLOR};
             overflow: hidden;
             padding: 5px;
-            ${'' /* border: .5px solid black; */}
+            border: .5px solid black;
             border-radius: 7px;
             display: flex;
             font-family: 'Staatliches', cursive;
@@ -61,7 +70,7 @@ const NavBar = ({
         .nav-item {
             width: 100px;
             padding: 5px;
-            ${'' /* border: .5px solid black; */}
+            border: .5px solid black;
             font-size: 23px;
         }
 
@@ -81,31 +90,107 @@ const NavBar = ({
         .make-spin:hover {
             animation: spin 0.5s;
         }
+
+        @media only screen and (max-width: 600px) {
+            .nav-container {
+                display: none;
+            }
+
+            .logo-container {
+                height: 25px;
+                flex-direction: row;
+            }
+
+            .item-container {
+                ${'' /* height: 25px; */}
+                justify-content: center;
+                flex-direction: row;
+            }
+
+            .mobile-dropdown {
+                
+            }
+
+            .mobile-container {
+                height: 30px;
+                background-color: ${NAVCOLOR};
+                ${'' /* overflow: hidden; */}
+                padding: 5px;
+                border: .5px solid black;
+                ${'' /* border-radius: 7px; */}
+                display: flex;
+                font-family: 'Staatliches', cursive;
+                align-items: center;
+            }
+
+        }
     `;
 
-    return (
-        <div css={navBarStyles}>
-            <nav className="nav-container">
-                <div className="logo-container">
-                    <img alt="spinning rainbow logo" className="logo-img make-spin" src="rainbow-small.png"></img>
-                    <div className="logo">
-                        NATE McGREGOR
+    if (isMobile) {
+        return (
+            <div css={navBarStyles}>
+                <div className="mobile-container">
+                    <div className="logo-container">
+                        <img alt="spinning rainbow logo" className="logo-img make-spin" src="rainbow-small.png"></img>
+                        <div className="logo">
+                            NATE McGREGOR
+                        </div>
                     </div>
                 </div>
-                <div className="item-container">
-                    <div className="nav-item">
-                        <a href="#">WORK</a>
-                    </div>
-                    <div className="nav-item">
-                        <a href="#">LIFE</a>
-                    </div>
-                    <div className="nav-item">
-                        <a href="#">STUFF</a>
+                <div className="mobile-container">
+                    <div className="item-container">
+                        WORK
                     </div>
                 </div>
-            </nav>
-        </div>
-    );
+                <div className="mobile-container">
+                    <div className="item-container">
+                        LIFE
+                    </div>
+                </div>
+                <div className="mobile-container">
+                    <div className="item-container">
+                        STUFF
+                    </div>
+                </div>
+            </div>
+        );
+    }else{
+        return (
+            <div css={navBarStyles}>
+                <nav className="nav-container">
+                    <div className="logo-container">
+                        <img alt="spinning rainbow logo" className="logo-img make-spin" src="rainbow-small.png"></img>
+                        <div className="logo">
+                            NATE McGREGOR
+                        </div>
+                    </div>
+                    <div className="item-container">
+                        <div className="nav-item">
+                            <a href="#">WORK</a>
+                        </div>
+                        <div className="nav-item">
+                            <a href="#">LIFE</a>
+                        </div>
+                        <div className="nav-item">
+                            <a href="#">STUFF</a>
+                        </div>
+                    </div>
+                </nav>
+                <div className="mobile-container">
+                    
+                </div>
+                <div className="mobile-container">
+                    
+                </div>
+                <div className="mobile-container">
+                    
+                </div>
+                <div className="mobile-container">
+                    
+                </div>
+            </div>
+        );
+    }
 };
 
 // NavBar.propTypes = {
