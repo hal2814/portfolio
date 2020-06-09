@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { css } from '@emotion/core';
 import NavBar from '../Nav/NavBar';
 import Panel from '../Panel/Panel';
+import Portfolio from '../Portfolio/Portfolio';
 import AOS from 'aos';
 import { PRIMARY, GRAD1, GRAD2 } from '../consts/css';
 
@@ -49,7 +50,7 @@ const MainLayout = ({
             curveType={curve}
           />
         </main>
-        <Panel welcomeText={"work"} anchorId={"work"} />
+        <Portfolio titleText={"work"} anchorId={"work"} />
         <Panel welcomeText={"life"} anchorId={"life"} />
         <Panel welcomeText={"stuff"} anchorId={"stuff"} />
       </div>

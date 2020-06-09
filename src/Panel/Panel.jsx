@@ -11,56 +11,56 @@ const Panel = (props) => {
     } = props;
 
     const PanelStyles = css`
+      .focus {
+        display: flex;
+        height: 600px;
+        width: 100%;
+        ${'' /* border: .5px solid black; */}
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
 
-        .focus { 
-            display: flex;
-            height: 600px;
-            width: 100%;
-            ${'' /* border: .5px solid black; */}
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
+      .gradient-background {
+        background-image: linear-gradient(${GRAD1}, ${GRAD2});
+        background-attachment: fixed;
+      }
 
-        .gradient-background {
-            background-image: linear-gradient(${GRAD1}, ${GRAD2});
-        }
+      .curve {
+        border-radius: 0 0 75% 0%;
+      }
 
-        .curve {
-            border-radius: 0 0 75% 0%;
-        }
+      .text-focus {
+        color: ${FOCUSCOLOR};
+        display: flex;
+        width: 75%;
+        ${"" /* border: .5px solid black; */}
+      }
 
-        .text-focus {
-            color: ${FOCUSCOLOR};
-            display: flex;
-            width: 75%;
-            ${'' /* border: .5px solid black; */}
-        }
+      .welcome-text {
+        font-size: 42px;
+        font-family: "Armata", sans-serif;
+        text-shadow: 2px 2px 5px #340068;
+      }
 
+      .welcome-text-head {
+        font-size: 50px;
+        color: ${FOCUSHEAD};
+      }
+
+      @media only screen and (max-width: 600px) {
         .welcome-text {
-            font-size: 42px;
-            font-family: 'Armata', sans-serif;
-            text-shadow: 2px 2px 5px #340068;
+          font-size: 22px;
         }
 
         .welcome-text-head {
-            font-size: 50px;
-            color: ${FOCUSHEAD};
+          font-size: 25px;
         }
 
-        @media only screen and (max-width: 600px) {
-            .welcome-text {
-                font-size: 22px;
-            }
-
-            .welcome-text-head {
-                font-size: 25px;
-            }
-
-            .curve {
-                border-radius: 0 0 80% 0%;
-            }
+        .curve {
+          border-radius: 0 0 0% 0%;
         }
+      }
     `;
 
     return (
