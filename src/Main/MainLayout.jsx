@@ -20,7 +20,7 @@ const MainLayout = ({
         color: ${PRIMARY};
         ${'' /* width: 100%; */}
         height: 1000px;
-        margin-top: 60px;
+        ${'' /* margin-top: 60px; */}
         font-size:36;
         ${'' /* background-image: linear-gradient(${GRAD1}, ${GRAD2}); */}
 
@@ -39,15 +39,20 @@ const MainLayout = ({
 
 
     return (
-        <div css={mainLayoutStyles}>
-            <NavBar />
-            <main data-aos="fade-in">
-                <Panel welcomeText={welcomeText} welcomeTextHead={welcomeTextHead} backgroundType={gradBackground} curveType={curve} />
-            </main>
-            <Panel welcomeText={'work'}/>
-            <Panel welcomeText={'life'}/>
-            <Panel welcomeText={'stuff'}/>
-        </div>
+      <div css={mainLayoutStyles}>
+        <NavBar />
+        <main data-aos="fade-in">
+          <Panel
+            welcomeText={welcomeText}
+            welcomeTextHead={welcomeTextHead}
+            backgroundType={gradBackground}
+            curveType={curve}
+          />
+        </main>
+        <Panel welcomeText={"work"} anchorId={"work"} />
+        <Panel welcomeText={"life"} anchorId={"life"} />
+        <Panel welcomeText={"stuff"} anchorId={"stuff"} />
+      </div>
     );
 };
 

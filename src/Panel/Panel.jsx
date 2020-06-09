@@ -6,7 +6,7 @@ import { FOCUSCOLOR, FOCUSHEAD, GRAD1, GRAD2  } from '../consts/css';
 
 const Panel = (props) => {
     const {
-        welcomeText, welcomeTextHead, backgroundType, curveType
+        welcomeText, welcomeTextHead, backgroundType, curveType, anchorId
         // things, doThingsAction,
     } = props;
 
@@ -58,24 +58,22 @@ const Panel = (props) => {
             }
 
             .curve {
-                border-radius: 0 0 0% 0%;
+                border-radius: 0 0 80% 0%;
             }
         }
     `;
 
     return (
-        <div css={PanelStyles}>
-            <div className={"focus" + " " + backgroundType + " " + curveType}>
-                <div className="text-focus welcome-text welcome-text-head">
-                    {welcomeTextHead}
-                    {/* {welcomeText} */}
-                </div>
-                <div className="text-focus welcome-text">
-                    {/* {welcomeTextHead} */}
-                    {welcomeText}
-                </div>
-            </div>
+      <div css={PanelStyles}>
+        <div className={"focus" + " " + backgroundType + " " + curveType} id={anchorId}>
+          <div className="text-focus welcome-text welcome-text-head">
+            {welcomeTextHead}
+          </div>
+          <div className="text-focus welcome-text">
+            {welcomeText}
+          </div>
         </div>
+      </div>
     );
 };
 

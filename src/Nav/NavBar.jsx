@@ -16,6 +16,10 @@ const NavBar = ({
         window.addEventListener('resize', handleResize)
     });
 
+    useEffect(() => {
+        // function handleScroll(window.pageYOffset)
+    });
+
     const navBarStyles = css`
         position: fixed;
         overflow: hidden;
@@ -27,12 +31,25 @@ const NavBar = ({
             text-decoration: none;
         }
 
+        .nav-wrapper {
+            position: fixed;
+            background-color: ${NAVCOLOR};
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 2;
+            transition: transform 0.4s;
+        }
+
         .nav-container {
             height: 60px;
             background-color: ${NAVCOLOR};
             overflow: hidden;
             padding: 5px;
-            border: .5px solid black;
+            ${'' /* border: .5px solid black; */}
             border-radius: 7px;
             display: flex;
             font-family: 'Staatliches', cursive;
@@ -41,7 +58,7 @@ const NavBar = ({
         }
 
         .logo-container {
-            width: 275px;
+            ${'' /* width: 275px; */}
             height: 100%;
             display: flex;
             margin: 20px;
@@ -70,7 +87,7 @@ const NavBar = ({
         .nav-item {
             width: 100px;
             padding: 5px;
-            border: .5px solid black;
+            ${'' /* border: .5px solid black; */}
             font-size: 23px;
         }
 
@@ -96,31 +113,44 @@ const NavBar = ({
                 display: none;
             }
 
-            .logo-container {
-                height: 25px;
-                flex-direction: row;
+            .nav-item {
+                width: unset;
+                font-size: 6vw;
             }
 
-            .item-container {
-                ${'' /* height: 25px; */}
-                justify-content: center;
-                flex-direction: row;
+            .logo {
+                font-size: 7vw;
             }
+
+            ${'' /* .item-container {
+                display: flex;
+                justify-contnent: center;
+            } */}
 
             .mobile-dropdown {
                 
             }
 
-            .mobile-container {
-                height: 30px;
-                background-color: ${NAVCOLOR};
-                ${'' /* overflow: hidden; */}
-                padding: 5px;
-                border: .5px solid black;
+            .mobile-item-container {
+                padding: 2px;
+                ${'' /* border: .5px solid black; */}
                 ${'' /* border-radius: 7px; */}
                 display: flex;
                 font-family: 'Staatliches', cursive;
                 align-items: center;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+            }
+
+            .mobile-logo-container {
+                height: 100%;
+                padding: 2px;
+                ${'' /* border: .5px solid black; */}
+                ${'' /* border-radius: 7px; */}
+                display: flex;
+                font-family: 'Staatliches', cursive;
+                align-items: center;
+                justify-content: center;
             }
 
         }
@@ -129,27 +159,25 @@ const NavBar = ({
     if (isMobile) {
         return (
             <div css={navBarStyles}>
-                <div className="mobile-container">
-                    <div className="logo-container">
+                <div className="nav-wrapper">
+                    <div className="mobile-logo-container">
                         <img alt="spinning rainbow logo" className="logo-img make-spin" src="rainbow-small.png"></img>
                         <div className="logo">
-                            NATE McGREGOR
+                            <a href="#">NATE McGREGOR</a>
                         </div>
                     </div>
-                </div>
-                <div className="mobile-container">
-                    <div className="item-container">
-                        WORK
-                    </div>
-                </div>
-                <div className="mobile-container">
-                    <div className="item-container">
-                        LIFE
-                    </div>
-                </div>
-                <div className="mobile-container">
-                    <div className="item-container">
-                        STUFF
+                    <div className="mobile-item-container">
+                        <div className="nav-item">
+                            <a href="#work">WORK</a>
+                        </div>
+                    
+                        <div className="nav-item">
+                            <a href="#life">LIFE</a>
+                        </div>
+                    
+                        <div className="nav-item">
+                            <a href="#stuff">STUFF</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -161,33 +189,21 @@ const NavBar = ({
                     <div className="logo-container">
                         <img alt="spinning rainbow logo" className="logo-img make-spin" src="rainbow-small.png"></img>
                         <div className="logo">
-                            NATE McGREGOR
+                            <a href="#">NATE McGREGOR</a>
                         </div>
                     </div>
                     <div className="item-container">
                         <div className="nav-item">
-                            <a href="#">WORK</a>
+                            <a href="#work">WORK</a>
                         </div>
                         <div className="nav-item">
-                            <a href="#">LIFE</a>
+                            <a href="#life">LIFE</a>
                         </div>
                         <div className="nav-item">
-                            <a href="#">STUFF</a>
+                            <a href="#stuff">STUFF</a>
                         </div>
                     </div>
                 </nav>
-                <div className="mobile-container">
-                    
-                </div>
-                <div className="mobile-container">
-                    
-                </div>
-                <div className="mobile-container">
-                    
-                </div>
-                <div className="mobile-container">
-                    
-                </div>
             </div>
         );
     }
